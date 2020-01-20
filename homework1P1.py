@@ -1,4 +1,3 @@
-print('hello')
 # 1 print the differences in Python2 and Python3
 def prob1():
 	print('''
@@ -24,7 +23,7 @@ def prob2():
 
 # 3 Assign y as reversed order of list x. Print y
 def prob3(x):
-	y = x[::-1] # reverse list by slicing it
+	y = x[::-1] # reverse list by slicing it, counting in -1
 	print(y)
 
 # 4 Use list slicing to assign z [1, 3, 5] from x. Print z
@@ -32,10 +31,15 @@ def prob4(x):
 	z = x[1::2] # we start at index 1 and slice out in 2s 
 	print(z)
 
-def prob5()
+# 5 Debug your friends code
+def prob5():
+    x = 90
+    if x > 0:
+        print('x is positive')
 
 if __name__ == '__main__':
 	prob1()
 	x = prob2()
 	prob3(x)
 	prob4(x)
+	prob5()

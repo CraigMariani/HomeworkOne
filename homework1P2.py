@@ -6,19 +6,24 @@ import math
 # Print F with the final 23 numbers 
 # Hint: use F.append() to add a new Fibonnaci value to the end of the list F
 def prob1():
-	F = [0, 1]
-	sequence = 0
-	for index, item in enumerate(F):
+	# F = [0, 1]
+	# sequence = 0
+	# for index, item in enumerate(F):
 
-		if sequence > 0:
-			sum = F[index - 1] + F[index]
-			F.append(sum)
+	# 	if sequence > 0:
+	# 		sum = F[index - 1] + F[index]
+	# 		F.append(sum)
 
-		sequence += 1
+	# 	sequence += 1
 		
-		if sequence > 23:
-			break
+	# 	if sequence > 23:
+	# 		break
 
+	F = [0, 1]
+
+	for num in range(21):
+		sum = F[num] + F[num+1]
+		F.append(sum)
 	print(F)
 	
 	# def transform(item0, item1, sequence):
@@ -65,11 +70,21 @@ def prob3():
 
 # 4 Use loop to find the largest integer that when squared is less than 
 # 2000. Print the integer
-def prob4()
+def prob4():
 	
-	largest_int = [i**2 for i in range(10000000) if i**2 < 2000]
+	# largest_int = [i**2 for i in range(10000000) if i**2 < 2000]
 
-	print(largest_int[len(largest_int) - 1])
+	# print(largest_int[len(largest_int) - 1])
+
+	largest_int = 0
+
+	while largest_int ** 2 < 2000:
+		# print(largest_int)
+		largest_int += 1
+
+	largest_int -= 1
+	print(largest_int)
+	print(largest_int**2)
 
 
 # 5 Create three seperate functions one calculates volume (v),
@@ -116,8 +131,8 @@ def prob5():
 		
 
 if __name__ == '__main__':
-	# prob1()
-	# prob2()
-	# prob3()
-	# prob4()
+	prob1()
+	prob2()
+	prob3()
+	prob4()
 	prob5()
